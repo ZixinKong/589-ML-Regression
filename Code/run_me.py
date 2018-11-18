@@ -43,7 +43,7 @@ train_x_2, train_y_2, test_x_2 = read_data_localization_indoors()
 #print('Train=', train_x_2.shape) #shape: (row, column) Train= (19937, 400)
 #print('Test=', test_x_2.shape) # Test= (1111, 400)
 
-"""
+
 # Questions 1: Decision Trees
 # (b)
 print ("Now is for question 1(b): decision tree model in power plant dataset ...")
@@ -255,7 +255,7 @@ file_name = '../Predictions/PowerOutput/best.csv'
 print('Writing output to ', file_name)
 kaggle.kaggleize(predicted_y, file_name)
 print ("\n")
-"""
+
 
 # (b)
 print ("Now is for question 5(b): Improve model in indoor localization dataset ...")
@@ -300,7 +300,7 @@ print ("The best parameter for indoor localization model is: ", best_parameter2)
 
 
 # best _parameter=4
-"""
+
 print  ("Now training full dataset with k=", best_parameter2)
 knn = KNeighborsRegressor(n_neighbors=4, leaf_size=40)
 knn.fit(train_x_2, train_y_2)
@@ -313,7 +313,6 @@ file_name = '../Predictions/IndoorLocalization/best.csv'
 print('Writing output to ', file_name)
 kaggle.kaggleize(predicted_y, file_name)
 
-"""
 
 
 
